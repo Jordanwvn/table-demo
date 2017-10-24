@@ -2,34 +2,35 @@
 
 var table = document.getElementById('table_content');
 var data = [];
+var cars = [];
 
-var cars = [{
-    make: 'honda',
-    model: 'accord',
-    year: 2011,
-    mileage: 87000
-  },
-  {
-    make: 'toyota',
-    model: 'corolla',
-    year: 1999,
-    mileage: 213000
-  },
-  {
-    make: 'ford',
-    model: 'escort',
-    year: 1993,
-    mileage: 9800
-  }];
+function Car(make, model, year, mileage) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.mileage = mileage;
+}
 
-  for (var i = 0; i < cars.length; i++) {
-    data.push(
-      '<td>' + cars[i].make + '</td>' +
-      '<td>' + cars[i].model + '</td>' +
-      '<td>' + cars[i].year + '</td>' +
-      '<td>' + cars[i].mileage + '</td>'
-    )
-  }
+var toyota = new Car('toyota', 'corolla', 1988, 213000);
+var honda = new Car('honda', 'accord', 2012, 110000);
+var ford = new Car('ford', 'escort', 1993, 123000);
+var fiat = new Car('fiat', '500', 2014, 91000);
+
+
+cars.push(toyota);
+cars.push(honda);
+cars.push(ford);
+cars.push(fiat);
+
+
+for (var i = 0; i < cars.length; i++) {
+  data.push(
+    '<td>' + cars[i].make + '</td>' +
+    '<td>' + cars[i].model + '</td>' +
+    '<td>' + cars[i].year + '</td>' +
+    '<td>' + cars[i].mileage + '</td>'
+  )
+}
 
 var newRow;
 
