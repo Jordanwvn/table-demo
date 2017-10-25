@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>table demo</title>
+    <title>forms and events</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <!-- content goes here -->
-    <table id="shell">
-      <thead>
-        <tr>
-          <th>make</th>
-          <th>model</th>
-          <th>year</th>
-          <th>mileage</th>
-        <tr>
-      <thead>
-      <tbody id="table_content">
-        <!-- table content generated in JS -->
-      </tbody>
-    </table>
+    <form id="sample-form">
+      <fieldset>
+        <label for="first">first name:</label>
+        <input type="text" name="first" placeholder="enter your first name" required>
+      </fieldset>
+
+      <fieldset>
+        <label for="last">last name:</label>
+        <input type="text" name="last" placeholder="enter your last name" required>
+      </fieldset>
+
+      <fieldset>
+        <label for="enrolled">currently enrolled?</label>
+        <input type="checkbox" name="enrolled" value="enrolled">
+      </fieldset>
+
+      <fieldset>
+        <label for="future-classes">interested in future courses?</label>
+        <input type="radio" name="future-classes" value="yes">yes
+        <input type="radio" name="future-classes" value="no">no
+      </fieldset>
+
+      <button id="submit-button" type="submit">add student</button>
+    </form>
     <script src="app.js"></script>
   </body>
 </html>
